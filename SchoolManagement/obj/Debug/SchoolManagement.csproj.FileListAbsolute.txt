@@ -1,0 +1,13 @@
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\SchoolManagement.exe.config
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\SchoolManagement.exe
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\SchoolManagement.pdb
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\Siticone.UI.dll
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.csproj.AssemblyReference.cache
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.csproj.SuggestedBindingRedirects.cache
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.FrmMain.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Properties.Resources.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.csproj.GenerateResource.cache
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.csproj.CoreCompileInputs.cache
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.csproj.CopyComplete
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.exe
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.pdb
