@@ -37,26 +37,37 @@ namespace SchoolManagement.WebServices
 
         public String UploadImage(string imgPath)
         {
-            string folderID = "1ndgIaEVO53GV0w1Ym81EQrQVGR1KCU6P";
-            var driveService = GetDriveService(true);
-            var fileMetaData = new Google.Apis.Drive.v3.Data.File()
+            string imgId = "";
+            try
             {
-                Name = Path.GetFileName(imgPath),
-                Parents = new List<String> { folderID }
-            };
+                string folderID = "1ndgIaEVO53GV0w1Ym81EQrQVGR1KCU6P";
+                var driveService = GetDriveService(true);
+                var fileMetaData = new Google.Apis.Drive.v3.Data.File()
+                {
+                    Name = Path.GetFileName(imgPath),
+                    Parents = new List<String> { folderID }
+                };
 
-            FilesResource.CreateMediaUpload request;
-            using (var stream = new FileStream(imgPath, FileMode.Open))
-            {
-                request = driveService.Files.Create(fileMetaData, stream, "");
-                request.Fields = "id";
-                request.Upload();
+                FilesResource.CreateMediaUpload request;
+                using (var stream = new FileStream(imgPath, FileMode.Open))
+                {
+                    request = driveService.Files.Create(fileMetaData, stream, "");
+                    request.Fields = "id";
+                    request.Upload();
+                }
+
+                var uploadedFile = request.ResponseBody;
+                if (uploadedFile == null) return String.Empty;
+
+                Console.WriteLine($"File '{fileMetaData.Name}' uploaded with ID: {uploadedFile.Id}");
+
+                imgId = uploadedFile.Id;
             }
-
-            var uploadedFile = request.ResponseBody;
-            Console.WriteLine($"File '{fileMetaData.Name}' uploaded with ID: {uploadedFile.Id}");
-
-            return uploadedFile.Id;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to upload: {ex.Message}");
+            }
+            return imgId;
         }
 
         public Image LoadImageDrive(string imgUID)
@@ -92,7 +103,7 @@ namespace SchoolManagement.WebServices
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"Error: {ex.Message}");
             }
             Console.WriteLine("Drive: connected");
             return image;

@@ -15,6 +15,7 @@ namespace SchoolManagement
 {
     public partial class FrmMain : Form
     {
+        private ImageService imageService = new ImageService();
         public FrmMain()
         {
             InitializeComponent();
@@ -47,28 +48,23 @@ namespace SchoolManagement
 
         #endregion
 
+        #region Menu
+
         private void HideAllSubMenu()
         {
             spSubAdministrator.Visible = false;
+            spSubInformations.Visible = false;
+            spSubExaminations.Visible = false;
         }
 
-        private void FrmMain_Load(object sender, EventArgs e)
+        private void CloseSettings()
         {
-            siticoneShadowForm.SetShadowForm(this);
-            ImageService imageService = new ImageService();
-            imageService.UploadImage($"{Application.StartupPath}\\photo1.jpg");
-            Image img = imageService.LoadImageDrive("1UxFKyHSjwXoJ4l7TGpgZ645JKc0Tv9OK");
-            pictureBox1.Image = img;
-        }
-
-        private void spbSlide_Click(object sender, EventArgs e)
-        {
-            spMenu.Width = spMenu.Width == 200 ? 55 : 200;
-            spbSlide.Image = spMenu.Width == 200 ? Properties.Resources.logo_frm : Properties.Resources.s_logo;
+            sbmSettings.Checked = false;
         }
 
         private void sbmAdministrator_Click(object sender, EventArgs e)
         {
+            CloseSettings();
             spSubAdministrator.Visible = spSubAdministrator.Visible ? false : true;
         }
 
@@ -79,7 +75,80 @@ namespace SchoolManagement
 
         private void spSubAdministrator_VisibleChanged(object sender, EventArgs e)
         {
-            if (spSubAdministrator.Visible) smAdminUser.Checked = true;
+            smUser.Checked = true;
+        }
+
+        private void sbmTransactions_Click(object sender, EventArgs e)
+        {
+            CloseSettings();
+            lbHeader.Text = "Transactions";
+            ucTransaction1.BringToFront();
+        }
+
+        private void sbmDashboard_Click(object sender, EventArgs e)
+        {
+            CloseSettings();
+            lbHeader.Text = "Dashboard";
+            ucDashboard1.BringToFront();
+        }
+
+        private void sbmInformations_Click(object sender, EventArgs e)
+        {
+            CloseSettings();
+            spSubInformations.Visible = spSubInformations.Visible ? false : true;
+        }
+
+        private void spSubInformations_VisibleChanged(object sender, EventArgs e)
+        {
+            smStudents.Checked = true;
+        }
+
+        private void sbmInformations_CheckedChanged(object sender, EventArgs e)
+        {
+            HideAllSubMenu();
+        }
+
+        private void sbmExam_CheckedChanged(object sender, EventArgs e)
+        {
+            HideAllSubMenu();
+        }
+
+        private void sbmExam_Click(object sender, EventArgs e)
+        {
+            CloseSettings();
+            spSubExaminations.Visible = spSubExaminations.Visible ? false : true;
+        }
+
+        private void spSubExaminations_VisibleChanged(object sender, EventArgs e)
+        {
+            smTimeTables.Checked = true;
+        }
+
+        private void sbmSettings_CheckedChanged(object sender, EventArgs e)
+        {
+            HideAllSubMenu();
+        }
+
+        private void sbmTransactions_CheckedChanged(object sender, EventArgs e)
+        {
+            HideAllSubMenu();
+        }
+
+        private void sbmSettings_Click(object sender, EventArgs e)
+        {
+            sbmAdministrator.Checked = false;
+            sbmDashboard.Checked = false;
+            sbmExam.Checked = false;
+            sbmInformations.Checked = false;
+            sbmTransactions.Checked = false;
+        }
+
+        #endregion
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            siticoneShadowForm.SetShadowForm(this);
+            sbmDashboard_Click(null, null);
         }
     }
 }

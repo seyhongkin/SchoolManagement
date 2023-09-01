@@ -58,3 +58,5 @@ D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\Google.Apis.Core.x
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\Google.Apis.Drive.v3.pdb
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\Google.Apis.Drive.v3.xml
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\Newtonsoft.Json.xml
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCDashboard.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCTransaction.resources

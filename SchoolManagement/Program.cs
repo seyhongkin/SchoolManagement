@@ -37,7 +37,6 @@ namespace SchoolManagement
             {
                 connection.Open();
                 Console.WriteLine("Connected to MySQL database!");
-                // Perform your database operations here
             }
             catch (Exception ex)
             {
