@@ -76,6 +76,7 @@ namespace SchoolManagement
         private void spSubAdministrator_VisibleChanged(object sender, EventArgs e)
         {
             smUser.Checked = true;
+            smUser_Click(null, null);
         }
 
         private void sbmTransactions_Click(object sender, EventArgs e)
@@ -101,6 +102,7 @@ namespace SchoolManagement
         private void spSubInformations_VisibleChanged(object sender, EventArgs e)
         {
             smStudents.Checked = true;
+            smStudents_Click(null, null);
         }
 
         private void sbmInformations_CheckedChanged(object sender, EventArgs e)
@@ -122,6 +124,7 @@ namespace SchoolManagement
         private void spSubExaminations_VisibleChanged(object sender, EventArgs e)
         {
             smTimeTables.Checked = true;
+            smTimeTables_Click(null, null);
         }
 
         private void sbmSettings_CheckedChanged(object sender, EventArgs e)
@@ -141,6 +144,8 @@ namespace SchoolManagement
             sbmExam.Checked = false;
             sbmInformations.Checked = false;
             sbmTransactions.Checked = false;
+            lbHeader.Text = "Settings";
+            ucSettings1.BringToFront();
         }
 
         #endregion
@@ -149,6 +154,54 @@ namespace SchoolManagement
         {
             siticoneShadowForm.SetShadowForm(this);
             sbmDashboard_Click(null, null);
+        }
+
+        private void smTeacher_Click(object sender, EventArgs e)
+        {
+            lbHeader.Text = "Administrator > Teachers";
+            ucTeacher1.BringToFront();
+        }
+
+        private void smUser_Click(object sender, EventArgs e)
+        {
+            lbHeader.Text = "Administrator > Users";
+            ucUser1.BringToFront();
+        }
+
+        private void smClassroom_Click(object sender, EventArgs e)
+        {
+            lbHeader.Text = "Administrator > Classrooms";
+            ucClassroom1.BringToFront();
+        }
+
+        private void smCourse_Click(object sender, EventArgs e)
+        {
+            lbHeader.Text = "Administrator > Courses";
+            ucCourse1.BringToFront();
+        }
+
+        private void smStudents_Click(object sender, EventArgs e)
+        {
+            lbHeader.Text = "Informations > Students";
+            ucStudent1.BringToFront();
+        }
+
+        private void smClasses_Click(object sender, EventArgs e)
+        {
+            lbHeader.Text = "Informations > Classes";
+            ucClass1.BringToFront();
+        }
+
+        private void smTimeTables_Click(object sender, EventArgs e)
+        {
+            lbHeader.Text = "Examinations > Time Tables";
+            ucTimeTable1.BringToFront();
+        }
+
+        private void smResults_Click(object sender, EventArgs e)
+        {
+            lbHeader.Text = "Examinations > Results";
+            ucResult1.BringToFront();
         }
     }
 }

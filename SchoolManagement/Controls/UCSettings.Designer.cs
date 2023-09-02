@@ -1,6 +1,6 @@
 ﻿namespace SchoolManagement.Controls
 {
-    partial class UCTransaction
+    partial class UCSettings
     {
         /// <summary> 
         /// Required designer variable.
@@ -38,21 +38,20 @@
             this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeader.Location = new System.Drawing.Point(340, 245);
             this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(134, 32);
+            this.lbHeader.Size = new System.Drawing.Size(100, 32);
             this.lbHeader.TabIndex = 6;
-            this.lbHeader.Text = "Transaction";
+            this.lbHeader.Text = "Settings";
             // 
-            // UCTransaction
+            // UCSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lbHeader);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UCTransaction";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "UCSettings";
             this.Size = new System.Drawing.Size(746, 522);
-            this.Load += new System.EventHandler(this.UCTransaction_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

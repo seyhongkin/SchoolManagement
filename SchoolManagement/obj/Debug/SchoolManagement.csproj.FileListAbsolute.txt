@@ -60,3 +60,12 @@ D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\Google.Apis.Drive.
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\bin\Debug\Newtonsoft.Json.xml
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCDashboard.resources
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCTransaction.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCUser.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCTeacher.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCClassroom.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCCourse.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCClass.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCResult.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCStudent.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCTimeTable.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCSettings.resources

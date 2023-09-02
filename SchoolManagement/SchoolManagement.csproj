@@ -124,17 +124,71 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\UCClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCClass.Designer.cs">
+      <DependentUpon>UCClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCClassroom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCClassroom.Designer.cs">
+      <DependentUpon>UCClassroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCCourse.Designer.cs">
+      <DependentUpon>UCCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UCDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\UCDashboard.Designer.cs">
       <DependentUpon>UCDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UCResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCResult.Designer.cs">
+      <DependentUpon>UCResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCSettings.Designer.cs">
+      <DependentUpon>UCSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCStudent.Designer.cs">
+      <DependentUpon>UCStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCTeacher.Designer.cs">
+      <DependentUpon>UCTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCTimeTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCTimeTable.Designer.cs">
+      <DependentUpon>UCTimeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UCTransaction.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\UCTransaction.Designer.cs">
       <DependentUpon>UCTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCUser.Designer.cs">
+      <DependentUpon>UCUser.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -145,11 +199,38 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebServices\ImageService.cs" />
+    <EmbeddedResource Include="Controls\UCClass.resx">
+      <DependentUpon>UCClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCClassroom.resx">
+      <DependentUpon>UCClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCCourse.resx">
+      <DependentUpon>UCCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCDashboard.resx">
       <DependentUpon>UCDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCResult.resx">
+      <DependentUpon>UCResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCSettings.resx">
+      <DependentUpon>UCSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCStudent.resx">
+      <DependentUpon>UCStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCTeacher.resx">
+      <DependentUpon>UCTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCTimeTable.resx">
+      <DependentUpon>UCTimeTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCTransaction.resx">
       <DependentUpon>UCTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCUser.resx">
+      <DependentUpon>UCUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

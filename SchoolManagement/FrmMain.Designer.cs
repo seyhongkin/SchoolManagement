@@ -57,11 +57,20 @@
             this.siticoneControlBox1 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneShadowForm = new Siticone.UI.WinForms.SiticoneShadowForm(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbHeader = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ucResult1 = new SchoolManagement.Controls.UCResult();
+            this.ucTimeTable1 = new SchoolManagement.Controls.UCTimeTable();
+            this.ucClass1 = new SchoolManagement.Controls.UCClass();
+            this.ucStudent1 = new SchoolManagement.Controls.UCStudent();
+            this.ucCourse1 = new SchoolManagement.Controls.UCCourse();
+            this.ucClassroom1 = new SchoolManagement.Controls.UCClassroom();
+            this.ucUser1 = new SchoolManagement.Controls.UCUser();
+            this.ucTeacher1 = new SchoolManagement.Controls.UCTeacher();
             this.ucTransaction1 = new SchoolManagement.Controls.UCTransaction();
             this.ucDashboard1 = new SchoolManagement.Controls.UCDashboard();
-            this.lbHeader = new System.Windows.Forms.Label();
+            this.ucSettings1 = new SchoolManagement.Controls.UCSettings();
             this.spMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -218,6 +227,7 @@
             this.smResults.Text = "Results";
             this.smResults.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.smResults.TextOffset = new System.Drawing.Point(22, 0);
+            this.smResults.Click += new System.EventHandler(this.smResults_Click);
             // 
             // smTimeTables
             // 
@@ -247,6 +257,7 @@
             this.smTimeTables.Text = "Time Tables";
             this.smTimeTables.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.smTimeTables.TextOffset = new System.Drawing.Point(22, 0);
+            this.smTimeTables.Click += new System.EventHandler(this.smTimeTables_Click);
             // 
             // sbmExam
             // 
@@ -321,6 +332,7 @@
             this.smClasses.Text = "Classes";
             this.smClasses.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.smClasses.TextOffset = new System.Drawing.Point(22, 0);
+            this.smClasses.Click += new System.EventHandler(this.smClasses_Click);
             // 
             // smStudents
             // 
@@ -350,6 +362,7 @@
             this.smStudents.Text = "Students";
             this.smStudents.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.smStudents.TextOffset = new System.Drawing.Point(22, 0);
+            this.smStudents.Click += new System.EventHandler(this.smStudents_Click);
             // 
             // sbmInformations
             // 
@@ -456,6 +469,7 @@
             this.smCourse.Text = "Courses";
             this.smCourse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.smCourse.TextOffset = new System.Drawing.Point(22, 0);
+            this.smCourse.Click += new System.EventHandler(this.smCourse_Click);
             // 
             // smClassroom
             // 
@@ -485,6 +499,7 @@
             this.smClassroom.Text = "Classrooms";
             this.smClassroom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.smClassroom.TextOffset = new System.Drawing.Point(22, 0);
+            this.smClassroom.Click += new System.EventHandler(this.smClassroom_Click);
             // 
             // smTeacher
             // 
@@ -514,6 +529,7 @@
             this.smTeacher.Text = "Teachers";
             this.smTeacher.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.smTeacher.TextOffset = new System.Drawing.Point(22, 0);
+            this.smTeacher.Click += new System.EventHandler(this.smTeacher_Click);
             // 
             // smUser
             // 
@@ -543,6 +559,7 @@
             this.smUser.Text = "Users";
             this.smUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.smUser.TextOffset = new System.Drawing.Point(22, 0);
+            this.smUser.Click += new System.EventHandler(this.smUser_Click);
             // 
             // sbmAdministrator
             // 
@@ -682,33 +699,21 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.ucSettings1);
+            this.panel3.Controls.Add(this.ucResult1);
+            this.panel3.Controls.Add(this.ucTimeTable1);
+            this.panel3.Controls.Add(this.ucClass1);
+            this.panel3.Controls.Add(this.ucStudent1);
+            this.panel3.Controls.Add(this.ucCourse1);
+            this.panel3.Controls.Add(this.ucClassroom1);
+            this.panel3.Controls.Add(this.ucUser1);
+            this.panel3.Controls.Add(this.ucTeacher1);
             this.panel3.Controls.Add(this.ucTransaction1);
             this.panel3.Controls.Add(this.ucDashboard1);
             this.panel3.Location = new System.Drawing.Point(206, 68);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(758, 522);
             this.panel3.TabIndex = 2;
-            // 
-            // ucTransaction1
-            // 
-            this.ucTransaction1.BackColor = System.Drawing.Color.White;
-            this.ucTransaction1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucTransaction1.Location = new System.Drawing.Point(0, 0);
-            this.ucTransaction1.Margin = new System.Windows.Forms.Padding(482, 16678, 482, 16678);
-            this.ucTransaction1.Name = "ucTransaction1";
-            this.ucTransaction1.Size = new System.Drawing.Size(758, 522);
-            this.ucTransaction1.TabIndex = 2;
-            // 
-            // ucDashboard1
-            // 
-            this.ucDashboard1.BackColor = System.Drawing.Color.White;
-            this.ucDashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucDashboard1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.ucDashboard1.Location = new System.Drawing.Point(0, 0);
-            this.ucDashboard1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucDashboard1.Name = "ucDashboard1";
-            this.ucDashboard1.Size = new System.Drawing.Size(758, 522);
-            this.ucDashboard1.TabIndex = 1;
             // 
             // lbHeader
             // 
@@ -720,6 +725,127 @@
             this.lbHeader.Size = new System.Drawing.Size(129, 32);
             this.lbHeader.TabIndex = 3;
             this.lbHeader.Text = "Dashboard";
+            // 
+            // ucResult1
+            // 
+            this.ucResult1.BackColor = System.Drawing.Color.White;
+            this.ucResult1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucResult1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucResult1.Location = new System.Drawing.Point(0, 0);
+            this.ucResult1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucResult1.Name = "ucResult1";
+            this.ucResult1.Size = new System.Drawing.Size(758, 522);
+            this.ucResult1.TabIndex = 9;
+            // 
+            // ucTimeTable1
+            // 
+            this.ucTimeTable1.BackColor = System.Drawing.Color.White;
+            this.ucTimeTable1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucTimeTable1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucTimeTable1.Location = new System.Drawing.Point(0, 0);
+            this.ucTimeTable1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTimeTable1.Name = "ucTimeTable1";
+            this.ucTimeTable1.Size = new System.Drawing.Size(758, 522);
+            this.ucTimeTable1.TabIndex = 8;
+            // 
+            // ucClass1
+            // 
+            this.ucClass1.BackColor = System.Drawing.Color.White;
+            this.ucClass1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucClass1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucClass1.Location = new System.Drawing.Point(0, 0);
+            this.ucClass1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucClass1.Name = "ucClass1";
+            this.ucClass1.Size = new System.Drawing.Size(758, 522);
+            this.ucClass1.TabIndex = 7;
+            // 
+            // ucStudent1
+            // 
+            this.ucStudent1.BackColor = System.Drawing.Color.White;
+            this.ucStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucStudent1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucStudent1.Location = new System.Drawing.Point(0, 0);
+            this.ucStudent1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucStudent1.Name = "ucStudent1";
+            this.ucStudent1.Size = new System.Drawing.Size(758, 522);
+            this.ucStudent1.TabIndex = 6;
+            // 
+            // ucCourse1
+            // 
+            this.ucCourse1.BackColor = System.Drawing.Color.White;
+            this.ucCourse1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucCourse1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucCourse1.Location = new System.Drawing.Point(0, 0);
+            this.ucCourse1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucCourse1.Name = "ucCourse1";
+            this.ucCourse1.Size = new System.Drawing.Size(758, 522);
+            this.ucCourse1.TabIndex = 5;
+            // 
+            // ucClassroom1
+            // 
+            this.ucClassroom1.BackColor = System.Drawing.Color.White;
+            this.ucClassroom1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucClassroom1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucClassroom1.Location = new System.Drawing.Point(0, 0);
+            this.ucClassroom1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucClassroom1.Name = "ucClassroom1";
+            this.ucClassroom1.Size = new System.Drawing.Size(758, 522);
+            this.ucClassroom1.TabIndex = 4;
+            // 
+            // ucUser1
+            // 
+            this.ucUser1.BackColor = System.Drawing.Color.White;
+            this.ucUser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucUser1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucUser1.Location = new System.Drawing.Point(0, 0);
+            this.ucUser1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucUser1.Name = "ucUser1";
+            this.ucUser1.Size = new System.Drawing.Size(758, 522);
+            this.ucUser1.TabIndex = 3;
+            // 
+            // ucTeacher1
+            // 
+            this.ucTeacher1.BackColor = System.Drawing.Color.White;
+            this.ucTeacher1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucTeacher1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucTeacher1.Location = new System.Drawing.Point(0, 0);
+            this.ucTeacher1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTeacher1.Name = "ucTeacher1";
+            this.ucTeacher1.Size = new System.Drawing.Size(758, 522);
+            this.ucTeacher1.TabIndex = 2;
+            // 
+            // ucTransaction1
+            // 
+            this.ucTransaction1.BackColor = System.Drawing.Color.White;
+            this.ucTransaction1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucTransaction1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucTransaction1.Location = new System.Drawing.Point(0, 0);
+            this.ucTransaction1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTransaction1.Name = "ucTransaction1";
+            this.ucTransaction1.Size = new System.Drawing.Size(758, 522);
+            this.ucTransaction1.TabIndex = 1;
+            // 
+            // ucDashboard1
+            // 
+            this.ucDashboard1.BackColor = System.Drawing.Color.White;
+            this.ucDashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucDashboard1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucDashboard1.Location = new System.Drawing.Point(0, 0);
+            this.ucDashboard1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucDashboard1.Name = "ucDashboard1";
+            this.ucDashboard1.Size = new System.Drawing.Size(758, 522);
+            this.ucDashboard1.TabIndex = 0;
+            // 
+            // ucSettings1
+            // 
+            this.ucSettings1.BackColor = System.Drawing.Color.White;
+            this.ucSettings1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucSettings1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucSettings1.Location = new System.Drawing.Point(0, 0);
+            this.ucSettings1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucSettings1.Name = "ucSettings1";
+            this.ucSettings1.Size = new System.Drawing.Size(758, 522);
+            this.ucSettings1.TabIndex = 10;
             // 
             // FrmMain
             // 
@@ -784,11 +910,20 @@
         private Siticone.UI.WinForms.SiticoneButton smClasses;
         private Siticone.UI.WinForms.SiticoneButton smStudents;
         private Siticone.UI.WinForms.SiticoneButton sbmInformations;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel3;
-        private Controls.UCTransaction ucTransaction1;
-        private Controls.UCDashboard ucDashboard1;
         private System.Windows.Forms.Label lbHeader;
+        private Controls.UCDashboard ucDashboard1;
+        private Controls.UCTeacher ucTeacher1;
+        private Controls.UCTransaction ucTransaction1;
+        private Controls.UCUser ucUser1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Controls.UCClassroom ucClassroom1;
+        private Controls.UCCourse ucCourse1;
+        private Controls.UCResult ucResult1;
+        private Controls.UCTimeTable ucTimeTable1;
+        private Controls.UCClass ucClass1;
+        private Controls.UCStudent ucStudent1;
+        private Controls.UCSettings ucSettings1;
     }
 }
 
