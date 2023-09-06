@@ -31,26 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.spMenu = new Siticone.UI.WinForms.SiticonePanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.sbmSettings = new Siticone.UI.WinForms.SiticoneButton();
-            this.sbmLogout = new Siticone.UI.WinForms.SiticoneButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.spSubExaminations = new Siticone.UI.WinForms.SiticonePanel();
-            this.smResults = new Siticone.UI.WinForms.SiticoneButton();
-            this.smTimeTables = new Siticone.UI.WinForms.SiticoneButton();
-            this.sbmExam = new Siticone.UI.WinForms.SiticoneButton();
             this.spSubInformations = new Siticone.UI.WinForms.SiticonePanel();
-            this.smClasses = new Siticone.UI.WinForms.SiticoneButton();
-            this.smStudents = new Siticone.UI.WinForms.SiticoneButton();
-            this.sbmInformations = new Siticone.UI.WinForms.SiticoneButton();
-            this.sbmTransactions = new Siticone.UI.WinForms.SiticoneButton();
             this.spSubAdministrator = new Siticone.UI.WinForms.SiticonePanel();
-            this.smCourse = new Siticone.UI.WinForms.SiticoneButton();
-            this.smClassroom = new Siticone.UI.WinForms.SiticoneButton();
-            this.smTeacher = new Siticone.UI.WinForms.SiticoneButton();
-            this.smUser = new Siticone.UI.WinForms.SiticoneButton();
-            this.sbmAdministrator = new Siticone.UI.WinForms.SiticoneButton();
-            this.sbmDashboard = new Siticone.UI.WinForms.SiticoneButton();
-            this.spbSlide = new Siticone.UI.WinForms.SiticonePictureBox();
             this.siticonePanel2 = new Siticone.UI.WinForms.SiticonePanel();
             this.siticoneControlBox3 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox2 = new Siticone.UI.WinForms.SiticoneControlBox();
@@ -60,6 +44,23 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbHeader = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.sbmSettings = new Siticone.UI.WinForms.SiticoneButton();
+            this.sbmLogout = new Siticone.UI.WinForms.SiticoneButton();
+            this.smResults = new Siticone.UI.WinForms.SiticoneButton();
+            this.smTimeTables = new Siticone.UI.WinForms.SiticoneButton();
+            this.sbmExam = new Siticone.UI.WinForms.SiticoneButton();
+            this.smClasses = new Siticone.UI.WinForms.SiticoneButton();
+            this.smStudents = new Siticone.UI.WinForms.SiticoneButton();
+            this.sbmInformations = new Siticone.UI.WinForms.SiticoneButton();
+            this.sbmTransactions = new Siticone.UI.WinForms.SiticoneButton();
+            this.smCourse = new Siticone.UI.WinForms.SiticoneButton();
+            this.smClassroom = new Siticone.UI.WinForms.SiticoneButton();
+            this.smTeacher = new Siticone.UI.WinForms.SiticoneButton();
+            this.smUser = new Siticone.UI.WinForms.SiticoneButton();
+            this.sbmAdministrator = new Siticone.UI.WinForms.SiticoneButton();
+            this.sbmDashboard = new Siticone.UI.WinForms.SiticoneButton();
+            this.spbSlide = new Siticone.UI.WinForms.SiticonePictureBox();
+            this.ucSettings1 = new SchoolManagement.Controls.UCSettings();
             this.ucResult1 = new SchoolManagement.Controls.UCResult();
             this.ucTimeTable1 = new SchoolManagement.Controls.UCTimeTable();
             this.ucClass1 = new SchoolManagement.Controls.UCClass();
@@ -70,16 +71,15 @@
             this.ucTeacher1 = new SchoolManagement.Controls.UCTeacher();
             this.ucTransaction1 = new SchoolManagement.Controls.UCTransaction();
             this.ucDashboard1 = new SchoolManagement.Controls.UCDashboard();
-            this.ucSettings1 = new SchoolManagement.Controls.UCSettings();
             this.spMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.spSubExaminations.SuspendLayout();
             this.spSubInformations.SuspendLayout();
             this.spSubAdministrator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spbSlide)).BeginInit();
             this.siticonePanel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spbSlide)).BeginInit();
             this.SuspendLayout();
             // 
             // spMenu
@@ -107,6 +107,162 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 74);
             this.panel2.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.spSubExaminations);
+            this.panel1.Controls.Add(this.sbmExam);
+            this.panel1.Controls.Add(this.spSubInformations);
+            this.panel1.Controls.Add(this.sbmInformations);
+            this.panel1.Controls.Add(this.sbmTransactions);
+            this.panel1.Controls.Add(this.spSubAdministrator);
+            this.panel1.Controls.Add(this.sbmAdministrator);
+            this.panel1.Controls.Add(this.sbmDashboard);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 84);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 380);
+            this.panel1.TabIndex = 8;
+            // 
+            // spSubExaminations
+            // 
+            this.spSubExaminations.AutoSize = true;
+            this.spSubExaminations.Controls.Add(this.smResults);
+            this.spSubExaminations.Controls.Add(this.smTimeTables);
+            this.spSubExaminations.Dock = System.Windows.Forms.DockStyle.Top;
+            this.spSubExaminations.Location = new System.Drawing.Point(0, 407);
+            this.spSubExaminations.Name = "spSubExaminations";
+            this.spSubExaminations.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.spSubExaminations.ShadowDecoration.Parent = this.spSubExaminations;
+            this.spSubExaminations.Size = new System.Drawing.Size(183, 74);
+            this.spSubExaminations.TabIndex = 29;
+            this.spSubExaminations.Visible = false;
+            this.spSubExaminations.VisibleChanged += new System.EventHandler(this.spSubExaminations_VisibleChanged);
+            // 
+            // spSubInformations
+            // 
+            this.spSubInformations.AutoSize = true;
+            this.spSubInformations.Controls.Add(this.smClasses);
+            this.spSubInformations.Controls.Add(this.smStudents);
+            this.spSubInformations.Dock = System.Windows.Forms.DockStyle.Top;
+            this.spSubInformations.Location = new System.Drawing.Point(0, 296);
+            this.spSubInformations.Name = "spSubInformations";
+            this.spSubInformations.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.spSubInformations.ShadowDecoration.Parent = this.spSubInformations;
+            this.spSubInformations.Size = new System.Drawing.Size(183, 74);
+            this.spSubInformations.TabIndex = 27;
+            this.spSubInformations.Visible = false;
+            this.spSubInformations.VisibleChanged += new System.EventHandler(this.spSubInformations_VisibleChanged);
+            // 
+            // spSubAdministrator
+            // 
+            this.spSubAdministrator.AutoSize = true;
+            this.spSubAdministrator.Controls.Add(this.smCourse);
+            this.spSubAdministrator.Controls.Add(this.smClassroom);
+            this.spSubAdministrator.Controls.Add(this.smTeacher);
+            this.spSubAdministrator.Controls.Add(this.smUser);
+            this.spSubAdministrator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.spSubAdministrator.Location = new System.Drawing.Point(0, 74);
+            this.spSubAdministrator.Name = "spSubAdministrator";
+            this.spSubAdministrator.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.spSubAdministrator.ShadowDecoration.Parent = this.spSubAdministrator;
+            this.spSubAdministrator.Size = new System.Drawing.Size(183, 148);
+            this.spSubAdministrator.TabIndex = 10;
+            this.spSubAdministrator.Visible = false;
+            this.spSubAdministrator.VisibleChanged += new System.EventHandler(this.spSubAdministrator_VisibleChanged);
+            // 
+            // siticonePanel2
+            // 
+            this.siticonePanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticonePanel2.Controls.Add(this.siticoneControlBox3);
+            this.siticonePanel2.Controls.Add(this.siticoneControlBox2);
+            this.siticonePanel2.Controls.Add(this.siticoneControlBox1);
+            this.siticonePanel2.Location = new System.Drawing.Point(206, 0);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.ShadowDecoration.Parent = this.siticonePanel2;
+            this.siticonePanel2.Size = new System.Drawing.Size(758, 29);
+            this.siticonePanel2.TabIndex = 1;
+            // 
+            // siticoneControlBox3
+            // 
+            this.siticoneControlBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.siticoneControlBox3.ControlBoxType = Siticone.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.siticoneControlBox3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.siticoneControlBox3.FillColor = System.Drawing.Color.White;
+            this.siticoneControlBox3.HoveredState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.siticoneControlBox3.HoveredState.Parent = this.siticoneControlBox3;
+            this.siticoneControlBox3.IconColor = System.Drawing.Color.Black;
+            this.siticoneControlBox3.Location = new System.Drawing.Point(623, 0);
+            this.siticoneControlBox3.Name = "siticoneControlBox3";
+            this.siticoneControlBox3.ShadowDecoration.Parent = this.siticoneControlBox3;
+            this.siticoneControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.siticoneControlBox3.TabIndex = 2;
+            // 
+            // siticoneControlBox2
+            // 
+            this.siticoneControlBox2.ControlBoxType = Siticone.UI.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.siticoneControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.siticoneControlBox2.FillColor = System.Drawing.Color.White;
+            this.siticoneControlBox2.HoveredState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.siticoneControlBox2.HoveredState.Parent = this.siticoneControlBox2;
+            this.siticoneControlBox2.IconColor = System.Drawing.Color.Black;
+            this.siticoneControlBox2.Location = new System.Drawing.Point(668, 0);
+            this.siticoneControlBox2.Name = "siticoneControlBox2";
+            this.siticoneControlBox2.ShadowDecoration.Parent = this.siticoneControlBox2;
+            this.siticoneControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.siticoneControlBox2.TabIndex = 1;
+            // 
+            // siticoneControlBox1
+            // 
+            this.siticoneControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.siticoneControlBox1.FillColor = System.Drawing.Color.White;
+            this.siticoneControlBox1.HoveredState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
+            this.siticoneControlBox1.HoveredState.IconColor = System.Drawing.Color.White;
+            this.siticoneControlBox1.HoveredState.Parent = this.siticoneControlBox1;
+            this.siticoneControlBox1.IconColor = System.Drawing.Color.Black;
+            this.siticoneControlBox1.Location = new System.Drawing.Point(713, 0);
+            this.siticoneControlBox1.Name = "siticoneControlBox1";
+            this.siticoneControlBox1.ShadowDecoration.Parent = this.siticoneControlBox1;
+            this.siticoneControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.siticoneControlBox1.TabIndex = 0;
+            // 
+            // siticoneDragControl1
+            // 
+            this.siticoneDragControl1.TargetControl = this.siticonePanel2;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.ucSettings1);
+            this.panel3.Controls.Add(this.ucResult1);
+            this.panel3.Controls.Add(this.ucTimeTable1);
+            this.panel3.Controls.Add(this.ucClass1);
+            this.panel3.Controls.Add(this.ucStudent1);
+            this.panel3.Controls.Add(this.ucCourse1);
+            this.panel3.Controls.Add(this.ucClassroom1);
+            this.panel3.Controls.Add(this.ucUser1);
+            this.panel3.Controls.Add(this.ucTeacher1);
+            this.panel3.Controls.Add(this.ucTransaction1);
+            this.panel3.Controls.Add(this.ucDashboard1);
+            this.panel3.Location = new System.Drawing.Point(206, 84);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(750, 506);
+            this.panel3.TabIndex = 2;
+            // 
+            // lbHeader
+            // 
+            this.lbHeader.AutoSize = true;
+            this.lbHeader.BackColor = System.Drawing.Color.Transparent;
+            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.Location = new System.Drawing.Point(223, 34);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Size = new System.Drawing.Size(129, 32);
+            this.lbHeader.TabIndex = 3;
+            this.lbHeader.Text = "Dashboard";
             // 
             // sbmSettings
             // 
@@ -166,38 +322,6 @@
             this.sbmLogout.Text = "Logout";
             this.sbmLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.sbmLogout.TextOffset = new System.Drawing.Point(22, 0);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.spSubExaminations);
-            this.panel1.Controls.Add(this.sbmExam);
-            this.panel1.Controls.Add(this.spSubInformations);
-            this.panel1.Controls.Add(this.sbmInformations);
-            this.panel1.Controls.Add(this.sbmTransactions);
-            this.panel1.Controls.Add(this.spSubAdministrator);
-            this.panel1.Controls.Add(this.sbmAdministrator);
-            this.panel1.Controls.Add(this.sbmDashboard);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 84);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 380);
-            this.panel1.TabIndex = 8;
-            // 
-            // spSubExaminations
-            // 
-            this.spSubExaminations.AutoSize = true;
-            this.spSubExaminations.Controls.Add(this.smResults);
-            this.spSubExaminations.Controls.Add(this.smTimeTables);
-            this.spSubExaminations.Dock = System.Windows.Forms.DockStyle.Top;
-            this.spSubExaminations.Location = new System.Drawing.Point(0, 407);
-            this.spSubExaminations.Name = "spSubExaminations";
-            this.spSubExaminations.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.spSubExaminations.ShadowDecoration.Parent = this.spSubExaminations;
-            this.spSubExaminations.Size = new System.Drawing.Size(183, 74);
-            this.spSubExaminations.TabIndex = 29;
-            this.spSubExaminations.Visible = false;
-            this.spSubExaminations.VisibleChanged += new System.EventHandler(this.spSubExaminations_VisibleChanged);
             // 
             // smResults
             // 
@@ -288,21 +412,6 @@
             this.sbmExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.sbmExam.TextOffset = new System.Drawing.Point(22, 0);
             this.sbmExam.Click += new System.EventHandler(this.sbmExam_Click);
-            // 
-            // spSubInformations
-            // 
-            this.spSubInformations.AutoSize = true;
-            this.spSubInformations.Controls.Add(this.smClasses);
-            this.spSubInformations.Controls.Add(this.smStudents);
-            this.spSubInformations.Dock = System.Windows.Forms.DockStyle.Top;
-            this.spSubInformations.Location = new System.Drawing.Point(0, 296);
-            this.spSubInformations.Name = "spSubInformations";
-            this.spSubInformations.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.spSubInformations.ShadowDecoration.Parent = this.spSubInformations;
-            this.spSubInformations.Size = new System.Drawing.Size(183, 74);
-            this.spSubInformations.TabIndex = 27;
-            this.spSubInformations.Visible = false;
-            this.spSubInformations.VisibleChanged += new System.EventHandler(this.spSubInformations_VisibleChanged);
             // 
             // smClasses
             // 
@@ -423,23 +532,6 @@
             this.sbmTransactions.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.sbmTransactions.TextOffset = new System.Drawing.Point(22, 0);
             this.sbmTransactions.Click += new System.EventHandler(this.sbmTransactions_Click);
-            // 
-            // spSubAdministrator
-            // 
-            this.spSubAdministrator.AutoSize = true;
-            this.spSubAdministrator.Controls.Add(this.smCourse);
-            this.spSubAdministrator.Controls.Add(this.smClassroom);
-            this.spSubAdministrator.Controls.Add(this.smTeacher);
-            this.spSubAdministrator.Controls.Add(this.smUser);
-            this.spSubAdministrator.Dock = System.Windows.Forms.DockStyle.Top;
-            this.spSubAdministrator.Location = new System.Drawing.Point(0, 74);
-            this.spSubAdministrator.Name = "spSubAdministrator";
-            this.spSubAdministrator.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.spSubAdministrator.ShadowDecoration.Parent = this.spSubAdministrator;
-            this.spSubAdministrator.Size = new System.Drawing.Size(183, 148);
-            this.spSubAdministrator.TabIndex = 10;
-            this.spSubAdministrator.Visible = false;
-            this.spSubAdministrator.VisibleChanged += new System.EventHandler(this.spSubAdministrator_VisibleChanged);
             // 
             // smCourse
             // 
@@ -634,97 +726,16 @@
             this.spbSlide.TabIndex = 3;
             this.spbSlide.TabStop = false;
             // 
-            // siticonePanel2
+            // ucSettings1
             // 
-            this.siticonePanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticonePanel2.Controls.Add(this.siticoneControlBox3);
-            this.siticonePanel2.Controls.Add(this.siticoneControlBox2);
-            this.siticonePanel2.Controls.Add(this.siticoneControlBox1);
-            this.siticonePanel2.Location = new System.Drawing.Point(206, 0);
-            this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.ShadowDecoration.Parent = this.siticonePanel2;
-            this.siticonePanel2.Size = new System.Drawing.Size(758, 29);
-            this.siticonePanel2.TabIndex = 1;
-            // 
-            // siticoneControlBox3
-            // 
-            this.siticoneControlBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.siticoneControlBox3.ControlBoxType = Siticone.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.siticoneControlBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticoneControlBox3.FillColor = System.Drawing.Color.White;
-            this.siticoneControlBox3.HoveredState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.siticoneControlBox3.HoveredState.Parent = this.siticoneControlBox3;
-            this.siticoneControlBox3.IconColor = System.Drawing.Color.Black;
-            this.siticoneControlBox3.Location = new System.Drawing.Point(623, 0);
-            this.siticoneControlBox3.Name = "siticoneControlBox3";
-            this.siticoneControlBox3.ShadowDecoration.Parent = this.siticoneControlBox3;
-            this.siticoneControlBox3.Size = new System.Drawing.Size(45, 29);
-            this.siticoneControlBox3.TabIndex = 2;
-            // 
-            // siticoneControlBox2
-            // 
-            this.siticoneControlBox2.ControlBoxType = Siticone.UI.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.siticoneControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticoneControlBox2.FillColor = System.Drawing.Color.White;
-            this.siticoneControlBox2.HoveredState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.siticoneControlBox2.HoveredState.Parent = this.siticoneControlBox2;
-            this.siticoneControlBox2.IconColor = System.Drawing.Color.Black;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(668, 0);
-            this.siticoneControlBox2.Name = "siticoneControlBox2";
-            this.siticoneControlBox2.ShadowDecoration.Parent = this.siticoneControlBox2;
-            this.siticoneControlBox2.Size = new System.Drawing.Size(45, 29);
-            this.siticoneControlBox2.TabIndex = 1;
-            // 
-            // siticoneControlBox1
-            // 
-            this.siticoneControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticoneControlBox1.FillColor = System.Drawing.Color.White;
-            this.siticoneControlBox1.HoveredState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
-            this.siticoneControlBox1.HoveredState.IconColor = System.Drawing.Color.White;
-            this.siticoneControlBox1.HoveredState.Parent = this.siticoneControlBox1;
-            this.siticoneControlBox1.IconColor = System.Drawing.Color.Black;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(713, 0);
-            this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.ShadowDecoration.Parent = this.siticoneControlBox1;
-            this.siticoneControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.siticoneControlBox1.TabIndex = 0;
-            // 
-            // siticoneDragControl1
-            // 
-            this.siticoneDragControl1.TargetControl = this.siticonePanel2;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.ucSettings1);
-            this.panel3.Controls.Add(this.ucResult1);
-            this.panel3.Controls.Add(this.ucTimeTable1);
-            this.panel3.Controls.Add(this.ucClass1);
-            this.panel3.Controls.Add(this.ucStudent1);
-            this.panel3.Controls.Add(this.ucCourse1);
-            this.panel3.Controls.Add(this.ucClassroom1);
-            this.panel3.Controls.Add(this.ucUser1);
-            this.panel3.Controls.Add(this.ucTeacher1);
-            this.panel3.Controls.Add(this.ucTransaction1);
-            this.panel3.Controls.Add(this.ucDashboard1);
-            this.panel3.Location = new System.Drawing.Point(206, 68);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(758, 522);
-            this.panel3.TabIndex = 2;
-            // 
-            // lbHeader
-            // 
-            this.lbHeader.AutoSize = true;
-            this.lbHeader.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeader.Location = new System.Drawing.Point(223, 34);
-            this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(129, 32);
-            this.lbHeader.TabIndex = 3;
-            this.lbHeader.Text = "Dashboard";
+            this.ucSettings1.BackColor = System.Drawing.Color.White;
+            this.ucSettings1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucSettings1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ucSettings1.Location = new System.Drawing.Point(0, 0);
+            this.ucSettings1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucSettings1.Name = "ucSettings1";
+            this.ucSettings1.Size = new System.Drawing.Size(750, 506);
+            this.ucSettings1.TabIndex = 10;
             // 
             // ucResult1
             // 
@@ -734,7 +745,7 @@
             this.ucResult1.Location = new System.Drawing.Point(0, 0);
             this.ucResult1.Margin = new System.Windows.Forms.Padding(4);
             this.ucResult1.Name = "ucResult1";
-            this.ucResult1.Size = new System.Drawing.Size(758, 522);
+            this.ucResult1.Size = new System.Drawing.Size(750, 506);
             this.ucResult1.TabIndex = 9;
             // 
             // ucTimeTable1
@@ -745,7 +756,7 @@
             this.ucTimeTable1.Location = new System.Drawing.Point(0, 0);
             this.ucTimeTable1.Margin = new System.Windows.Forms.Padding(4);
             this.ucTimeTable1.Name = "ucTimeTable1";
-            this.ucTimeTable1.Size = new System.Drawing.Size(758, 522);
+            this.ucTimeTable1.Size = new System.Drawing.Size(750, 506);
             this.ucTimeTable1.TabIndex = 8;
             // 
             // ucClass1
@@ -756,7 +767,7 @@
             this.ucClass1.Location = new System.Drawing.Point(0, 0);
             this.ucClass1.Margin = new System.Windows.Forms.Padding(4);
             this.ucClass1.Name = "ucClass1";
-            this.ucClass1.Size = new System.Drawing.Size(758, 522);
+            this.ucClass1.Size = new System.Drawing.Size(750, 506);
             this.ucClass1.TabIndex = 7;
             // 
             // ucStudent1
@@ -767,7 +778,7 @@
             this.ucStudent1.Location = new System.Drawing.Point(0, 0);
             this.ucStudent1.Margin = new System.Windows.Forms.Padding(4);
             this.ucStudent1.Name = "ucStudent1";
-            this.ucStudent1.Size = new System.Drawing.Size(758, 522);
+            this.ucStudent1.Size = new System.Drawing.Size(750, 506);
             this.ucStudent1.TabIndex = 6;
             // 
             // ucCourse1
@@ -778,7 +789,7 @@
             this.ucCourse1.Location = new System.Drawing.Point(0, 0);
             this.ucCourse1.Margin = new System.Windows.Forms.Padding(4);
             this.ucCourse1.Name = "ucCourse1";
-            this.ucCourse1.Size = new System.Drawing.Size(758, 522);
+            this.ucCourse1.Size = new System.Drawing.Size(750, 506);
             this.ucCourse1.TabIndex = 5;
             // 
             // ucClassroom1
@@ -789,7 +800,7 @@
             this.ucClassroom1.Location = new System.Drawing.Point(0, 0);
             this.ucClassroom1.Margin = new System.Windows.Forms.Padding(4);
             this.ucClassroom1.Name = "ucClassroom1";
-            this.ucClassroom1.Size = new System.Drawing.Size(758, 522);
+            this.ucClassroom1.Size = new System.Drawing.Size(750, 506);
             this.ucClassroom1.TabIndex = 4;
             // 
             // ucUser1
@@ -800,7 +811,7 @@
             this.ucUser1.Location = new System.Drawing.Point(0, 0);
             this.ucUser1.Margin = new System.Windows.Forms.Padding(4);
             this.ucUser1.Name = "ucUser1";
-            this.ucUser1.Size = new System.Drawing.Size(758, 522);
+            this.ucUser1.Size = new System.Drawing.Size(750, 506);
             this.ucUser1.TabIndex = 3;
             // 
             // ucTeacher1
@@ -811,7 +822,7 @@
             this.ucTeacher1.Location = new System.Drawing.Point(0, 0);
             this.ucTeacher1.Margin = new System.Windows.Forms.Padding(4);
             this.ucTeacher1.Name = "ucTeacher1";
-            this.ucTeacher1.Size = new System.Drawing.Size(758, 522);
+            this.ucTeacher1.Size = new System.Drawing.Size(750, 506);
             this.ucTeacher1.TabIndex = 2;
             // 
             // ucTransaction1
@@ -822,7 +833,7 @@
             this.ucTransaction1.Location = new System.Drawing.Point(0, 0);
             this.ucTransaction1.Margin = new System.Windows.Forms.Padding(4);
             this.ucTransaction1.Name = "ucTransaction1";
-            this.ucTransaction1.Size = new System.Drawing.Size(758, 522);
+            this.ucTransaction1.Size = new System.Drawing.Size(750, 506);
             this.ucTransaction1.TabIndex = 1;
             // 
             // ucDashboard1
@@ -833,19 +844,8 @@
             this.ucDashboard1.Location = new System.Drawing.Point(0, 0);
             this.ucDashboard1.Margin = new System.Windows.Forms.Padding(4);
             this.ucDashboard1.Name = "ucDashboard1";
-            this.ucDashboard1.Size = new System.Drawing.Size(758, 522);
+            this.ucDashboard1.Size = new System.Drawing.Size(750, 506);
             this.ucDashboard1.TabIndex = 0;
-            // 
-            // ucSettings1
-            // 
-            this.ucSettings1.BackColor = System.Drawing.Color.White;
-            this.ucSettings1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucSettings1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.ucSettings1.Location = new System.Drawing.Point(0, 0);
-            this.ucSettings1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucSettings1.Name = "ucSettings1";
-            this.ucSettings1.Size = new System.Drawing.Size(758, 522);
-            this.ucSettings1.TabIndex = 10;
             // 
             // FrmMain
             // 
@@ -872,9 +872,9 @@
             this.spSubExaminations.ResumeLayout(false);
             this.spSubInformations.ResumeLayout(false);
             this.spSubAdministrator.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.spbSlide)).EndInit();
             this.siticonePanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spbSlide)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

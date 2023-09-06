@@ -28,37 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbHeader = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.sbRegister = new Siticone.UI.WinForms.SiticoneButton();
+            this.sbAllCRoom = new Siticone.UI.WinForms.SiticoneButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbHeader
+            // panel2
             // 
-            this.lbHeader.AutoSize = true;
-            this.lbHeader.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeader.Location = new System.Drawing.Point(309, 245);
-            this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(124, 32);
-            this.lbHeader.TabIndex = 4;
-            this.lbHeader.Text = "Classroom";
+            this.panel2.Controls.Add(this.sbRegister);
+            this.panel2.Controls.Add(this.sbAllCRoom);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(744, 35);
+            this.panel2.TabIndex = 5;
+            // 
+            // sbRegister
+            // 
+            this.sbRegister.ButtonMode = Siticone.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.sbRegister.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(101)))), ((int)(((byte)(212)))));
+            this.sbRegister.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.sbRegister.CheckedState.Parent = this.sbRegister;
+            this.sbRegister.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(101)))), ((int)(((byte)(212)))));
+            this.sbRegister.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.sbRegister.CustomImages.Parent = this.sbRegister;
+            this.sbRegister.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sbRegister.FillColor = System.Drawing.Color.White;
+            this.sbRegister.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.sbRegister.ForeColor = System.Drawing.Color.Black;
+            this.sbRegister.HoveredState.Parent = this.sbRegister;
+            this.sbRegister.Location = new System.Drawing.Point(169, 0);
+            this.sbRegister.Name = "sbRegister";
+            this.sbRegister.ShadowDecoration.Parent = this.sbRegister;
+            this.sbRegister.Size = new System.Drawing.Size(169, 35);
+            this.sbRegister.TabIndex = 1;
+            this.sbRegister.Text = "Create / Update";
+            // 
+            // sbAllCRoom
+            // 
+            this.sbAllCRoom.ButtonMode = Siticone.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.sbAllCRoom.Checked = true;
+            this.sbAllCRoom.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(101)))), ((int)(((byte)(212)))));
+            this.sbAllCRoom.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.sbAllCRoom.CheckedState.Parent = this.sbAllCRoom;
+            this.sbAllCRoom.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(101)))), ((int)(((byte)(212)))));
+            this.sbAllCRoom.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.sbAllCRoom.CustomImages.Parent = this.sbAllCRoom;
+            this.sbAllCRoom.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sbAllCRoom.FillColor = System.Drawing.Color.White;
+            this.sbAllCRoom.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.sbAllCRoom.ForeColor = System.Drawing.Color.Black;
+            this.sbAllCRoom.HoveredState.Parent = this.sbAllCRoom;
+            this.sbAllCRoom.Location = new System.Drawing.Point(0, 0);
+            this.sbAllCRoom.Name = "sbAllCRoom";
+            this.sbAllCRoom.ShadowDecoration.Parent = this.sbAllCRoom;
+            this.sbAllCRoom.Size = new System.Drawing.Size(169, 35);
+            this.sbAllCRoom.TabIndex = 0;
+            this.sbAllCRoom.Text = "All Classrooms";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Location = new System.Drawing.Point(0, 44);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(746, 478);
+            this.panel1.TabIndex = 6;
             // 
             // UCClassroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lbHeader);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCClassroom";
             this.Size = new System.Drawing.Size(746, 522);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbHeader;
+        private System.Windows.Forms.Panel panel2;
+        public Siticone.UI.WinForms.SiticoneButton sbRegister;
+        private Siticone.UI.WinForms.SiticoneButton sbAllCRoom;
+        private System.Windows.Forms.Panel panel1;
     }
 }

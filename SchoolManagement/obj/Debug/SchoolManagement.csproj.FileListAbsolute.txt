@@ -69,3 +69,7 @@ D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.C
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCStudent.resources
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCTimeTable.resources
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.UCSettings.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCTeacherDis.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCTeacherRegist.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCRoomCreate.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCRoomDis.resources
