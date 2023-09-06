@@ -17,7 +17,6 @@ namespace SchoolManagement.Controls
     {
         private SiticoneButton regist;
         public DataGridViewRow row;
-        public long Tid { get; set; }
 
         public SUCTeacherDis()
         {

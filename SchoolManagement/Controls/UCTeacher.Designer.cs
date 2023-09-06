@@ -83,7 +83,6 @@
             this.sucTeacherDis1.Name = "sucTeacherDis1";
             this.sucTeacherDis1.Size = new System.Drawing.Size(744, 459);
             this.sucTeacherDis1.TabIndex = 2;
-            this.sucTeacherDis1.Tid = ((long)(0));
             // 
             // sucTeacherRegist1
             // 

@@ -32,13 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sdgvDis = new Siticone.UI.WinForms.SiticoneDataGridView();
-            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eng_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kh_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.sdgvDis)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,13 +58,8 @@
             this.sdgvDis.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.sdgvDis.ColumnHeadersHeight = 36;
             this.sdgvDis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TID,
-            this.Eng_Name,
-            this.Kh_Name,
-            this.Gender,
-            this.Dob,
-            this.Phone,
-            this.Email});
+            this.Column1,
+            this.Column2});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -111,54 +101,23 @@
             this.sdgvDis.ThemeStyle.RowsStyle.Height = 28;
             this.sdgvDis.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.sdgvDis.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.sdgvDis.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvDis_CellDoubleClick);
             // 
-            // TID
+            // Column1
             // 
-            this.TID.HeaderText = "TID";
-            this.TID.Name = "TID";
-            this.TID.ReadOnly = true;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.HeaderText = "Nº";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 47;
             // 
-            // Eng_Name
+            // Column2
             // 
-            this.Eng_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Eng_Name.HeaderText = "English Name";
-            this.Eng_Name.Name = "Eng_Name";
-            this.Eng_Name.ReadOnly = true;
-            this.Eng_Name.Width = 102;
-            // 
-            // Kh_Name
-            // 
-            this.Kh_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Kh_Name.HeaderText = "Khmer Name";
-            this.Kh_Name.Name = "Kh_Name";
-            this.Kh_Name.ReadOnly = true;
-            this.Kh_Name.Width = 99;
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Dob
-            // 
-            this.Dob.HeaderText = "DOB";
-            this.Dob.Name = "Dob";
-            this.Dob.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Phone Number";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 62;
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "Type";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 58;
             // 
             // SUCCRoomDis
             // 
@@ -178,12 +137,7 @@
         #endregion
 
         public Siticone.UI.WinForms.SiticoneDataGridView sdgvDis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Eng_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kh_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dob;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

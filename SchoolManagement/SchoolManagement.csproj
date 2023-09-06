@@ -214,6 +214,7 @@
     <Compile Include="Controls\UCUser.Designer.cs">
       <DependentUpon>UCUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\Classroom.cs" />
     <Compile Include="DTO\Teacher.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -223,6 +224,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ClassroomService.cs" />
     <Compile Include="Service\TeacherService.cs" />
     <Compile Include="Utils\FileUtil.cs" />
     <Compile Include="WebServices\ImageService.cs" />

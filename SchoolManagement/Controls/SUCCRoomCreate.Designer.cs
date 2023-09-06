@@ -32,7 +32,7 @@
             this.lbMsg = new System.Windows.Forms.Label();
             this.sbClear = new Siticone.UI.WinForms.SiticoneButton();
             this.sbConfirm = new Siticone.UI.WinForms.SiticoneButton();
-            this.stxtLNameEng = new Siticone.UI.WinForms.SiticoneTextBox();
+            this.stxtNumber = new Siticone.UI.WinForms.SiticoneTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.scbType = new Siticone.UI.WinForms.SiticoneComboBox();
@@ -57,6 +57,7 @@
             this.sbDelete.TabIndex = 56;
             this.sbDelete.Text = "Delete This";
             this.sbDelete.Visible = false;
+            this.sbDelete.Click += new System.EventHandler(this.sbDelete_Click);
             // 
             // lbMsg
             // 
@@ -83,6 +84,7 @@
             this.sbClear.Size = new System.Drawing.Size(125, 38);
             this.sbClear.TabIndex = 50;
             this.sbClear.Text = "Clear";
+            this.sbClear.Click += new System.EventHandler(this.sbClear_Click);
             // 
             // sbConfirm
             // 
@@ -97,29 +99,30 @@
             this.sbConfirm.Size = new System.Drawing.Size(125, 38);
             this.sbConfirm.TabIndex = 49;
             this.sbConfirm.Text = "Confirm";
+            this.sbConfirm.Click += new System.EventHandler(this.sbConfirm_Click);
             // 
-            // stxtLNameEng
+            // stxtNumber
             // 
-            this.stxtLNameEng.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.stxtLNameEng.DefaultText = "";
-            this.stxtLNameEng.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stxtLNameEng.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.stxtLNameEng.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.stxtLNameEng.DisabledState.Parent = this.stxtLNameEng;
-            this.stxtLNameEng.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.stxtLNameEng.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtLNameEng.FocusedState.Parent = this.stxtLNameEng;
-            this.stxtLNameEng.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtLNameEng.HoveredState.Parent = this.stxtLNameEng;
-            this.stxtLNameEng.Location = new System.Drawing.Point(32, 48);
-            this.stxtLNameEng.Margin = new System.Windows.Forms.Padding(5);
-            this.stxtLNameEng.Name = "stxtLNameEng";
-            this.stxtLNameEng.PasswordChar = '\0';
-            this.stxtLNameEng.PlaceholderText = "";
-            this.stxtLNameEng.SelectedText = "";
-            this.stxtLNameEng.ShadowDecoration.Parent = this.stxtLNameEng;
-            this.stxtLNameEng.Size = new System.Drawing.Size(267, 34);
-            this.stxtLNameEng.TabIndex = 37;
+            this.stxtNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stxtNumber.DefaultText = "";
+            this.stxtNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stxtNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.stxtNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.stxtNumber.DisabledState.Parent = this.stxtNumber;
+            this.stxtNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.stxtNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.stxtNumber.FocusedState.Parent = this.stxtNumber;
+            this.stxtNumber.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.stxtNumber.HoveredState.Parent = this.stxtNumber;
+            this.stxtNumber.Location = new System.Drawing.Point(32, 48);
+            this.stxtNumber.Margin = new System.Windows.Forms.Padding(5);
+            this.stxtNumber.Name = "stxtNumber";
+            this.stxtNumber.PasswordChar = '\0';
+            this.stxtNumber.PlaceholderText = "";
+            this.stxtNumber.SelectedText = "";
+            this.stxtNumber.ShadowDecoration.Parent = this.stxtNumber;
+            this.stxtNumber.Size = new System.Drawing.Size(267, 34);
+            this.stxtNumber.TabIndex = 37;
             // 
             // label2
             // 
@@ -171,7 +174,7 @@
             this.Controls.Add(this.lbMsg);
             this.Controls.Add(this.sbClear);
             this.Controls.Add(this.sbConfirm);
-            this.Controls.Add(this.stxtLNameEng);
+            this.Controls.Add(this.stxtNumber);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -190,9 +193,9 @@
         public System.Windows.Forms.Label lbMsg;
         private Siticone.UI.WinForms.SiticoneButton sbClear;
         private Siticone.UI.WinForms.SiticoneButton sbConfirm;
-        public Siticone.UI.WinForms.SiticoneTextBox stxtLNameEng;
+        public Siticone.UI.WinForms.SiticoneTextBox stxtNumber;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Siticone.UI.WinForms.SiticoneComboBox scbType;
+        public Siticone.UI.WinForms.SiticoneComboBox scbType;
     }
 }

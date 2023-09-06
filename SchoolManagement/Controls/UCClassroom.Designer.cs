@@ -32,7 +32,10 @@
             this.sbRegister = new Siticone.UI.WinForms.SiticoneButton();
             this.sbAllCRoom = new Siticone.UI.WinForms.SiticoneButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.succRoomCreate1 = new SchoolManagement.Controls.SUCCRoomCreate();
+            this.succRoomDis1 = new SchoolManagement.Controls.SUCCRoomDis(this.sbRegister);
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -64,6 +67,8 @@
             this.sbRegister.Size = new System.Drawing.Size(169, 35);
             this.sbRegister.TabIndex = 1;
             this.sbRegister.Text = "Create / Update";
+            this.sbRegister.CheckedChanged += new System.EventHandler(this.sbRegister_CheckedChanged);
+            this.sbRegister.Click += new System.EventHandler(this.sbRegister_Click);
             // 
             // sbAllCRoom
             // 
@@ -86,16 +91,43 @@
             this.sbAllCRoom.Size = new System.Drawing.Size(169, 35);
             this.sbAllCRoom.TabIndex = 0;
             this.sbAllCRoom.Text = "All Classrooms";
+            this.sbAllCRoom.Click += new System.EventHandler(this.sbAllCRoom_Click);
+            this.sbAllCRoom.DoubleClick += new System.EventHandler(this.sbAllCRoom_DoubleClick);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.succRoomDis1);
+            this.panel1.Controls.Add(this.succRoomCreate1);
             this.panel1.Location = new System.Drawing.Point(0, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(746, 478);
             this.panel1.TabIndex = 6;
+            // 
+            // succRoomCreate1
+            // 
+            this.succRoomCreate1.BackColor = System.Drawing.Color.White;
+            this.succRoomCreate1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.succRoomCreate1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.succRoomCreate1.Location = new System.Drawing.Point(0, 0);
+            this.succRoomCreate1.Margin = new System.Windows.Forms.Padding(4);
+            this.succRoomCreate1.Name = "succRoomCreate1";
+            this.succRoomCreate1.Size = new System.Drawing.Size(746, 478);
+            this.succRoomCreate1.TabIndex = 1;
+            this.succRoomCreate1.Load += new System.EventHandler(this.succRoomCreate1_Load);
+            // 
+            // succRoomDis1
+            // 
+            this.succRoomDis1.BackColor = System.Drawing.Color.White;
+            this.succRoomDis1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.succRoomDis1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.succRoomDis1.Location = new System.Drawing.Point(0, 0);
+            this.succRoomDis1.Margin = new System.Windows.Forms.Padding(4);
+            this.succRoomDis1.Name = "succRoomDis1";
+            this.succRoomDis1.Size = new System.Drawing.Size(746, 478);
+            this.succRoomDis1.TabIndex = 2;
             // 
             // UCClassroom
             // 
@@ -108,7 +140,9 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCClassroom";
             this.Size = new System.Drawing.Size(746, 522);
+            this.Load += new System.EventHandler(this.UCClassroom_Load);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -118,5 +152,7 @@
         public Siticone.UI.WinForms.SiticoneButton sbRegister;
         private Siticone.UI.WinForms.SiticoneButton sbAllCRoom;
         private System.Windows.Forms.Panel panel1;
+        private SUCCRoomCreate succRoomCreate1;
+        private SUCCRoomDis succRoomDis1;
     }
 }
