@@ -23,7 +23,7 @@ namespace SchoolManagement.Service
                 classroom.Type = reader["type"].ToString();
                 result.Add(classroom.Number, classroom);
             }
-
+            reader.Close();
             return result;
         }
     

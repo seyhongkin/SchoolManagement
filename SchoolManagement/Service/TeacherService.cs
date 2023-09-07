@@ -10,7 +10,7 @@ namespace SchoolManagement.Service
 {
     internal class TeacherService
     {
-        public Dictionary<long, Teacher> getAll()
+        public Dictionary<long, Teacher> GetAll()
         {
             OleDbCommand cmd = new OleDbCommand("SELECT * FROM tblteachers;", Program.connection);
             OleDbDataReader reader = cmd.ExecuteReader();
@@ -29,7 +29,7 @@ namespace SchoolManagement.Service
                 teacher.imgPath = reader["photo"].ToString();
                 result.Add(teacher.Tid, teacher);
             }
-
+            reader.Close();
             return result;
         }
 

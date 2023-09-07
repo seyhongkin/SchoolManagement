@@ -34,7 +34,7 @@ namespace SchoolManagement.Controls
         private void UCTeacher_Load(object sender, EventArgs e)
         {
             TeacherService tService = new TeacherService();
-            teachers = tService.getAll();
+            teachers = tService.GetAll();
 
             sucTeacherDis1.sdgvDis.Rows.Clear();
             foreach (var t in teachers.Values)

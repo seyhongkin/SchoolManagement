@@ -73,3 +73,7 @@ D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.C
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCTeacherRegist.resources
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCRoomCreate.resources
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCRoomDis.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCourseDis.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCreateCourse.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCClassDis.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCreateClass.resources

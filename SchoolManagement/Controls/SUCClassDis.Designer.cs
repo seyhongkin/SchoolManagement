@@ -1,6 +1,6 @@
 ﻿namespace SchoolManagement.Controls
 {
-    partial class SUCTeacherDis
+    partial class SUCClassDis
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,6 +37,7 @@
             this.Kh_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.sdgvDis)).BeginInit();
@@ -68,6 +69,7 @@
             this.Kh_Name,
             this.Gender,
             this.Dob,
+            this.Column1,
             this.Phone,
             this.Email});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -88,7 +90,7 @@
             this.sdgvDis.RowTemplate.Height = 28;
             this.sdgvDis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.sdgvDis.Size = new System.Drawing.Size(743, 471);
-            this.sdgvDis.TabIndex = 1;
+            this.sdgvDis.TabIndex = 3;
             this.sdgvDis.Theme = Siticone.UI.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.sdgvDis.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.sdgvDis.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -111,81 +113,89 @@
             this.sdgvDis.ThemeStyle.RowsStyle.Height = 28;
             this.sdgvDis.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.sdgvDis.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.sdgvDis.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.sdgvDis_CellMouseDoubleClick);
+            this.sdgvDis.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvDis_CellDoubleClick);
             // 
             // TID
             // 
             this.TID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TID.HeaderText = "TID";
+            this.TID.HeaderText = "ID";
             this.TID.Name = "TID";
             this.TID.ReadOnly = true;
-            this.TID.Width = 50;
+            this.TID.Width = 43;
             // 
             // Eng_Name
             // 
             this.Eng_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Eng_Name.HeaderText = "English Name";
+            this.Eng_Name.HeaderText = "Title";
             this.Eng_Name.Name = "Eng_Name";
             this.Eng_Name.ReadOnly = true;
-            this.Eng_Name.Width = 102;
+            this.Eng_Name.Width = 55;
             // 
             // Kh_Name
             // 
-            this.Kh_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Kh_Name.HeaderText = "Khmer Name";
+            this.Kh_Name.HeaderText = "Room";
             this.Kh_Name.Name = "Kh_Name";
             this.Kh_Name.ReadOnly = true;
-            this.Kh_Name.Width = 99;
             // 
             // Gender
             // 
-            this.Gender.HeaderText = "Gender";
+            this.Gender.HeaderText = "Section";
             this.Gender.Name = "Gender";
             this.Gender.ReadOnly = true;
             // 
             // Dob
             // 
-            this.Dob.HeaderText = "DOB";
+            this.Dob.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Dob.HeaderText = "Teacher Name KH";
             this.Dob.Name = "Dob";
             this.Dob.ReadOnly = true;
+            this.Dob.Width = 109;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "Teacher Name Eng";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 109;
             // 
             // Phone
             // 
-            this.Phone.HeaderText = "Phone Number";
+            this.Phone.HeaderText = "Start Date";
             this.Phone.Name = "Phone";
             this.Phone.ReadOnly = true;
             // 
             // Email
             // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Email.HeaderText = "Email";
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.HeaderText = "End Date";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
-            this.Email.Width = 62;
             // 
-            // SUCTeacherDis
+            // SUCClassDis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.sdgvDis);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "SUCTeacherDis";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "SUCClassDis";
             this.Size = new System.Drawing.Size(743, 471);
-            this.Load += new System.EventHandler(this.SUCTeacherDis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sdgvDis)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         public Siticone.UI.WinForms.SiticoneDataGridView sdgvDis;
         private System.Windows.Forms.DataGridViewTextBoxColumn TID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Eng_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kh_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dob;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
