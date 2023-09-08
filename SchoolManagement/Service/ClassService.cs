@@ -14,8 +14,8 @@ namespace SchoolManagement.Service
         public Dictionary<long, TeachClass> GetAll()
         {
             OleDbCommand cmd = new OleDbCommand("", Program.connection);
-            string sql = "SELECT tblclasses.clid, tblcourses.title, tblclasses.clr_id, tblclasses.c_section, tblteachers.lname_eng, tblteachers.fname_eng, tblteachers.lname_kh, tblteachers.fname_kh, tblclasses.start_date, tblclasses.end_date, tblcourses.cid, tblteachers.tid " +
-                "FROM tblcourses INNER JOIN (tblteachers INNER JOIN tblclasses ON tblteachers.tid = tblclasses.tid) ON tblcourses.cid = tblclasses.course_id;";
+            string sql = "SELECT tblclasses.clid, tblcourses.title, tblclasses.clr_id, tblclassrooms.type AS clr_type, tblclasses.c_section, tblteachers.lname_eng, tblteachers.fname_eng, tblteachers.lname_kh, tblteachers.fname_kh, tblclasses.start_date, tblclasses.end_date, tblcourses.cid, tblteachers.tid " +
+                "FROM tblclassrooms INNER JOIN (tblteachers INNER JOIN (tblcourses INNER JOIN tblclasses ON tblcourses.cid = tblclasses.course_id) ON tblteachers.tid = tblclasses.tid) ON tblclassrooms.clrid = tblclasses.clr_id;";
             cmd.CommandText = sql;
             OleDbDataReader reader = cmd.ExecuteReader();
             Dictionary<long, TeachClass> result = new Dictionary<long, TeachClass>();
@@ -27,6 +27,7 @@ namespace SchoolManagement.Service
                 teachClass.Cid = long.Parse(reader["cid"].ToString());
                 teachClass.Tid = long.Parse(reader["tid"].ToString());
                 teachClass.Clrid = reader["clr_id"].ToString();
+                teachClass.ClrType = reader["clr_type"].ToString();
                 teachClass.Section = reader["c_section"].ToString();
                 teachClass.TNameEng = reader["lname_eng"] + " " + reader["fname_eng"];
                 teachClass.TNameKh = reader["lname_kh"] + " " + reader["fname_kh"];
@@ -37,7 +38,7 @@ namespace SchoolManagement.Service
             reader.Close();
             return result;
         }
-    
+
         public int Create(TeachClass tc)
         {
             OleDbCommand cmd = new OleDbCommand("", Program.connection);
@@ -46,5 +47,26 @@ namespace SchoolManagement.Service
             cmd.CommandText = sql;
             return cmd.ExecuteNonQuery();
         }
+
+        public int Update(TeachClass tc)
+        {
+            OleDbCommand cmd = new OleDbCommand("", Program.connection);
+            string sql = "UPDATE tblclasses " +
+                $"SET course_id = {tc.Cid}, clr_id = '{tc.Clrid}', c_section = '{tc.Section}', tid = {tc.Tid}, start_date = '{tc.StartDate}', end_date = '{tc.EndDate}' " +
+                $"WHERE clid = {tc.Id};";
+
+            cmd.CommandText = sql;
+            return cmd.ExecuteNonQuery();
+        }
+
+        public int Remove(long clid)
+        {
+            OleDbCommand cmd = new OleDbCommand("", Program.connection);
+            string sql = $"DELETE FROM tblclasses WHERE clid = {clid};";
+
+            cmd.CommandText = sql;
+            return cmd.ExecuteNonQuery();
+        }
+    
     }
 }

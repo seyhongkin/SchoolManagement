@@ -361,6 +361,7 @@
             // 
             // pbImg
             // 
+            this.pbImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbImg.Location = new System.Drawing.Point(573, 18);
             this.pbImg.Name = "pbImg";
             this.pbImg.Size = new System.Drawing.Size(146, 176);

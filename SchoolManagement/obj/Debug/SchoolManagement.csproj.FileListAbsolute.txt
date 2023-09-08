@@ -77,3 +77,6 @@ D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.C
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCreateCourse.resources
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCClassDis.resources
 D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCreateClass.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCAllStudent.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCCreateStudent.resources
+D:\Class\C#\Year2\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.Controls.SUCStudentClasses.resources

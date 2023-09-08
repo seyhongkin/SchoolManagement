@@ -12,6 +12,7 @@ namespace SchoolManagement.DTO
         public long Cid { get; set; }
         public string CTitle { get; set; }
         public string Clrid { get; set; }
+        public string ClrType { get; set; }
         public long Tid { get; set; }
         public string TNameEng { get; set; }
         public string TNameKh { get; set; }

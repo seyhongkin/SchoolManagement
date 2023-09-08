@@ -124,6 +124,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\SUCAllStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SUCAllStudent.Designer.cs">
+      <DependentUpon>SUCAllStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\SUCClassDis.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     <Compile Include="Controls\SUCCreateCourse.Designer.cs">
       <DependentUpon>SUCCreateCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SUCCreateStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SUCCreateStudent.Designer.cs">
+      <DependentUpon>SUCCreateStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\SUCCRoomCreate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +171,12 @@
     </Compile>
     <Compile Include="Controls\SUCCRoomDis.Designer.cs">
       <DependentUpon>SUCCRoomDis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SUCStudentClasses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SUCStudentClasses.Designer.cs">
+      <DependentUpon>SUCStudentClasses.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\SUCTeacherDis.cs">
       <SubType>UserControl</SubType>
@@ -240,6 +258,7 @@
     </Compile>
     <Compile Include="DTO\Classroom.cs" />
     <Compile Include="DTO\Course.cs" />
+    <Compile Include="DTO\Student.cs" />
     <Compile Include="DTO\TeachClass.cs" />
     <Compile Include="DTO\Teacher.cs" />
     <Compile Include="FrmMain.cs">
@@ -253,9 +272,13 @@
     <Compile Include="Service\ClassroomService.cs" />
     <Compile Include="Service\ClassService.cs" />
     <Compile Include="Service\CourseService.cs" />
+    <Compile Include="Service\StudentService.cs" />
     <Compile Include="Service\TeacherService.cs" />
     <Compile Include="Utils\FileUtil.cs" />
     <Compile Include="WebServices\ImageService.cs" />
+    <EmbeddedResource Include="Controls\SUCAllStudent.resx">
+      <DependentUpon>SUCAllStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\SUCClassDis.resx">
       <DependentUpon>SUCClassDis.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,11 +291,17 @@
     <EmbeddedResource Include="Controls\SUCCreateCourse.resx">
       <DependentUpon>SUCCreateCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SUCCreateStudent.resx">
+      <DependentUpon>SUCCreateStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\SUCCRoomCreate.resx">
       <DependentUpon>SUCCRoomCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\SUCCRoomDis.resx">
       <DependentUpon>SUCCRoomDis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SUCStudentClasses.resx">
+      <DependentUpon>SUCStudentClasses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\SUCTeacherDis.resx">
       <DependentUpon>SUCTeacherDis.cs</DependentUpon>

@@ -78,8 +78,19 @@ namespace SchoolManagement.Controls
         private void sbRegister_CheckedChanged(object sender, EventArgs e)
         {
             if (!sbRegister.Checked) return;
-            
 
+            long clid = sucClassDis1.clid;
+            if (clid == -1 || !classes.ContainsKey(clid)) return;
+
+            sucCreateClass1._clid = clid;
+            sucCreateClass1.scbCourse.SelectedItem = classes[clid].Cid + "-" + classes[clid].CTitle;
+            sucCreateClass1.scbTeacher.SelectedItem = classes[clid].Tid + "-" + classes[clid].TNameKh + " " + classes[clid].TNameEng;
+            sucCreateClass1.scbRoom.SelectedItem = classes[clid].Clrid + "-" + classes[clid].ClrType;
+            sucCreateClass1.stxtSection.Text = classes[clid].Section;
+            sucCreateClass1.sdtStart.Value = classes[clid].StartDate;
+            sucCreateClass1.sdtEnd.Value = classes[clid].EndDate;
+            sucCreateClass1.updated = true;
+            sucCreateClass1.sbDelete.Visible = true;
             sucCreateClass1.BringToFront();
         }
 

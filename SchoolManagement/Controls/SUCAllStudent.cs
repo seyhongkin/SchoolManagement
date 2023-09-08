@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace SchoolManagement.Controls
 {
-    public partial class SUCClassDis : UserControl
+    public partial class SUCAllStudent : UserControl
     {
         private SiticoneButton btn;
-        public long clid = -1;
-        public SUCClassDis()
+        public long sid = -1;
+        public SUCAllStudent()
         {
             InitializeComponent();
         }
 
-        public SUCClassDis(SiticoneButton btn)
+        public SUCAllStudent(SiticoneButton btn)
         {
             this.btn = btn;
             InitializeComponent();
@@ -28,8 +28,8 @@ namespace SchoolManagement.Controls
 
         private void sdgvDis_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            clid = long.Parse(sdgvDis.SelectedRows[0].Cells[0].Value.ToString());
-            btn.Checked = true;
+            sid = long.Parse(sdgvDis.SelectedRows[0].Cells[0].Value.ToString());
+            if (btn != null) btn.Checked = true;
         }
     }
 }
